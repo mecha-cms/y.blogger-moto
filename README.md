@@ -19,14 +19,14 @@ Variants
 
 ![Blogger: Son of Moto](index/2.png?v=2023-12-17)
 
-### Mx. Moto
+### Mx. Moto ❇️
 
 ![Blogger: Mx. Moto](index/3.png?v=2023-12-17)
 
-### Daughter of Moto
+### Daughter of Moto ❇️
 
 ![Blogger: Daughter of Moto](index/4.png?v=2023-12-17)
 
-### Shadow of Moto
+### Shadow of Moto ❇️
 
 ![Blogger: Shadow of Moto](index/5.png?v=2023-12-17)
