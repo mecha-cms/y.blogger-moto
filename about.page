@@ -1,0 +1,31 @@
+---
+title: Blogger: Moto
+description: Moto (classic Blogger template), ported to Mecha.
+image: /lot/y/blogger-moto/index.png
+images:
+- /lot/y/blogger-moto/index.png
+- /lot/y/blogger-moto/index/1.png
+- /lot/y/blogger-moto/index/2.png
+author: Taufik Nurrohman
+type: Markdown
+version: 1.0.0
+...
+
+This is not a clone of the original Moto template. I didn’t make it from the original source code, but by refactoring
+it using more modern CSS and HTML syntax.
+
+### Features
+
+Other color variants of this template have been combined into one. You can enable other color variants via
+`.\lot\y\blogger-moto\state.php` file:
+
+~~~ .php
+<?php
+
+return [
+    'skin' => ['name' => 'mr']
+];
+~~~
+
+The default color variant is `mr`. There are several other color variants you can try, including `ms`, and `so`. These
+are the official color variants provided by the designer of this template in the past.
