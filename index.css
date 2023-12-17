@@ -618,7 +618,7 @@ body > div > header p {
   margin: 0;
 }
 body > div > header::after {
-  background: var(--stroke) url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAICAYAAAAm06XyAAAAP0lEQVQYV2NkwAL+AwFImBEIkNnoShmRBfApxCYH1oxPE7ptyGrBzgI5D5vz8YmB9VGkmSJnUxxg+AIFX2ACAGWvQAHtAAV8AAAAAElFTkSuQmCC") repeat 0 0;
+  background: var(--stroke) url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAICAYAAAAm06XyAAAAP0lEQVQYV2NkwAL+AwFImBEIkNnoShmRBfApxCYH1oxPE7ptyGrBzgI5D5vz8YmB9VGkmSJnUxxg+AIFX2ACAGWvQAHtAAV8AAAAAElFTkSuQmCC") repeat 50% 50%;
   bottom: 0;
   content: "";
   display: block;
@@ -789,6 +789,37 @@ body > div > nav + div > main > article + nav {
     width: auto;
   }
 }
+.skin\:do {
+  --bullet: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAASklEQVQYV2NkwALOhLr8N1m9hxFdCkMAphCbBhTF6ArRNcAV41KIrAGsGJfV6OKM2BQim4YsT5rJsOAh2s2ENMDkyQ9ndBvQYxAAdnaCcBsn+6wAAAAASUVORK5CYII=");
+  --color-1: #fee;
+  --color-button: #fff;
+  --color-code: #fff;
+  --color-input: #554;
+  --color-link-1: #e73;
+  --color-link-2: #e73;
+  --color-link: #c53;
+  --color-title-link-1: #e73;
+  --color-title-link-2: #e73;
+  --color-title-link: #c53;
+  --color-title: inherit;
+  --color: #554;
+  --face-1: Tahoma, Geneva, Verdana, sans-serif;
+  --face-2: "Courier New", Courier, monospace;
+  --face: Tahoma, Geneva, Verdana, sans-serif;
+  --fill-1: #c54;
+  --fill-2: #fff;
+  --fill-alert: rgba(204, 204, 204, 0.5);
+  --fill-button: #c43 linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.05));
+  --fill-code: #554;
+  --fill-input: #fff linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0));
+  --fill-mark: #dde;
+  --fill: #c43;
+  --stroke-1: #c54;
+  --stroke-alert: rgba(0, 0, 0, 0.5);
+  --stroke-input: #b43;
+  --stroke: #a43;
+}
+
 .skin\:mr {
   --bullet: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAASklEQVQYV2NkwAJmzuz4n55ewYguhSEAU4hNA4pidIXoGuCKcSlE1gBWjMtqdHFGbAqRTUOWJ81kWPAQ7WZCGmDy5Iczug3oMQgA7DOCxQs/NDwAAAAASUVORK5CYII=");
   --color-1: #ffe;
@@ -809,7 +840,7 @@ body > div > nav + div > main > article + nav {
   --fill-1: #ccb;
   --fill-2: #fff;
   --fill-alert: rgba(204, 204, 204, 0.5);
-  --fill-button: #998 linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.05));
+  --fill-button: #bba linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.05));
   --fill-code: #555;
   --fill-input: #fff linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0));
   --fill-mark: #eee;
@@ -851,12 +882,43 @@ body > div > nav + div > main > article + nav {
   --stroke: #d7b;
 }
 
+.skin\:mx {
+  --bullet: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAASklEQVQYV2NkwAJcOt7931MhxIguhSEAU4hNA4pidIXoGuCKcSlE1gBWjMtqdHFGbAqRTUOWJ81kWPAQ7WZCGmDy5Iczug3oMQgA63iCxXdHmM0AAAAASUVORK5CYII=");
+  --color-1: #eef;
+  --color-button: #fff;
+  --color-code: #fff;
+  --color-input: #554;
+  --color-link-1: #69c;
+  --color-link-2: #69c;
+  --color-link: #47c;
+  --color-title-link-1: #69c;
+  --color-title-link-2: #69c;
+  --color-title-link: #47c;
+  --color-title: inherit;
+  --color: #554;
+  --face-1: Tahoma, Geneva, Verdana, sans-serif;
+  --face-2: "Courier New", Courier, monospace;
+  --face: Tahoma, Geneva, Verdana, sans-serif;
+  --fill-1: #48e;
+  --fill-2: #fff;
+  --fill-alert: rgba(204, 204, 204, 0.5);
+  --fill-button: #47c linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.05));
+  --fill-code: #554;
+  --fill-input: #fff linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0));
+  --fill-mark: #dde;
+  --fill: #47c;
+  --stroke-1: #48e;
+  --stroke-alert: rgba(0, 0, 0, 0.5);
+  --stroke-input: #36a;
+  --stroke: #46a;
+}
+
 .skin\:so {
   --bullet: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAASklEQVQYV2NkwAI6div9r3C9x4guhSEAU4hNA4pidIXoGuCKcSlE1gBWjMtqdHFGbAqRTUOWJ81kWPAQ7WZCGmDy5Iczug3oMQgAdlSCcPN9bq0AAAAASUVORK5CYII=");
   --color-1: #ffe;
   --color-button: #fff;
   --color-code: #fff;
-  --color-input: #555;
+  --color-input: #554;
   --color-link-1: #8b2;
   --color-link-2: #8b2;
   --color-link: #692;
@@ -880,4 +942,35 @@ body > div > nav + div > main > article + nav {
   --stroke-alert: rgba(0, 0, 0, 0.5);
   --stroke-input: #571;
   --stroke: #571;
+}
+
+.skin\:wo {
+  --bullet: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAASklEQVQYV2NkwALS0tL+z5o1ixFdCkMAphCbBhTF6ArRNcAV41KIrAGsGJfV6OKM2BQim4YsT5rJsOAh2s2ENMDkyQ9ndBvQYxAALwKCPaP2Y14AAAAASUVORK5CYII=");
+  --color-1: #eee;
+  --color-button: #fff;
+  --color-code: #fff;
+  --color-input: #555;
+  --color-link-1: #999;
+  --color-link-2: #999;
+  --color-link: #777;
+  --color-title-link-1: #999;
+  --color-title-link-2: #999;
+  --color-title-link: #777;
+  --color-title: inherit;
+  --color: #555;
+  --face-1: Tahoma, Geneva, Verdana, sans-serif;
+  --face-2: "Courier New", Courier, monospace;
+  --face: Tahoma, Geneva, Verdana, sans-serif;
+  --fill-1: #666;
+  --fill-2: #fff;
+  --fill-alert: rgba(204, 204, 204, 0.5);
+  --fill-button: #444 linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.05));
+  --fill-code: #555;
+  --fill-input: #fff linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0));
+  --fill-mark: #eee;
+  --fill: #444;
+  --stroke-1: #666;
+  --stroke-alert: rgba(0, 0, 0, 0.5);
+  --stroke-input: #555;
+  --stroke: #555;
 }

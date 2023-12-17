@@ -23,9 +23,12 @@ Hook::set('_', function ($_) use ($state, $url) {
         ];
         $_['lot']['desk']['lot']['form']['lot'][1]['lot']['tabs']['lot']['blog']['lot']['fields']['lot']['skin'] = [
             'lot' => [
+                'do' => 'Daughter of Moto',
                 'mr' => 'Mr. Moto',
                 'ms' => 'Ms. Moto',
-                'so' => 'Son of Moto'
+                'mx' => 'Mx. Moto',
+                'so' => 'Son of Moto',
+                'wo' => 'Shadow of Moto'
             ],
             'name' => 'state[y][blogger-moto][skin][name]',
             'stack' => 30,
