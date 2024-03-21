@@ -352,7 +352,7 @@ button[type=submit],
 select,
 textarea {
   accent-color: var(--color-link);
-  background: var(--fill-input, var(--fill));
+  background: var(--fill-input, var(--fill-2));
   border: 1px solid;
   border-color: var(--stroke-input, var(--stroke));
   color: var(--color-input);
@@ -702,7 +702,7 @@ body > div {
   width: 692px;
 }
 body > div > footer {
-  background: var(--fill-1) linear-gradient(rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0)) repeat-x 0 0;
+  background: var(--fill-1) linear-gradient(rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0)) repeat-x 0 0;
   background-size: 20px 20px;
   color: var(--color-1);
   display: flex;
@@ -732,7 +732,7 @@ body > div > footer p {
   margin: 0;
 }
 body > div > header {
-  background: var(--fill-1) linear-gradient(rgba(255, 255, 255, 0.125), rgba(0, 0, 0, 0)) repeat-x 0 0;
+  background: var(--fill-1) linear-gradient(rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0)) repeat-x 0 0;
   background-size: 50px 50px;
   color: var(--color-1);
   padding: 15px 20px 23px;
@@ -774,7 +774,9 @@ body > div > header::after {
   right: 0;
 }
 body > div > nav {
-  background: var(--color-1) linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.05));
+  background: var(--color-1);
+  border: 0 solid rgba(0, 0, 0, 0.05);
+  border-bottom-width: 1px;
   line-height: 2.7rem;
   margin: 0;
 }
@@ -940,14 +942,14 @@ body > div > nav + div > main > article + nav {
   --fill-1: #c54;
   --fill-2: #fff;
   --fill-alert: rgba(204, 204, 204, 0.5);
-  --fill-button: #c43 linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.05));
+  --fill-button: #c43 linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.025));
   --fill-code: #554;
-  --fill-input: #fff linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0));
+  --fill-input: #fff linear-gradient(rgba(0, 0, 0, 0.025), rgba(0, 0, 0, 0));
   --fill-mark: #dde;
   --fill: #c43;
   --stroke-1: #c54;
   --stroke-alert: rgba(0, 0, 0, 0.5);
-  --stroke-input: #b43;
+  --stroke-input: #aaa;
   --stroke: #a43;
 }
 
@@ -971,14 +973,14 @@ body > div > nav + div > main > article + nav {
   --fill-1: #ccb;
   --fill-2: #fff;
   --fill-alert: rgba(204, 204, 204, 0.5);
-  --fill-button: #bba linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.05));
+  --fill-button: #bba linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.025));
   --fill-code: #555;
-  --fill-input: #fff linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0));
+  --fill-input: #fff linear-gradient(rgba(0, 0, 0, 0.025), rgba(0, 0, 0, 0));
   --fill-mark: #eee;
   --fill: #bba;
   --stroke-1: #ccb;
   --stroke-alert: rgba(0, 0, 0, 0.5);
-  --stroke-input: #998;
+  --stroke-input: #aaa;
   --stroke: #998;
 }
 
@@ -1002,14 +1004,14 @@ body > div > nav + div > main > article + nav {
   --fill-1: #e8b;
   --fill-2: #fff;
   --fill-alert: rgba(204, 204, 204, 0.5);
-  --fill-button: #d7b linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.05));
+  --fill-button: #d7b linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.025));
   --fill-code: #555;
-  --fill-input: #fff linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0));
+  --fill-input: #fff linear-gradient(rgba(0, 0, 0, 0.025), rgba(0, 0, 0, 0));
   --fill-mark: #ebe;
   --fill: #d7b;
   --stroke-1: #e8b;
   --stroke-alert: rgba(0, 0, 0, 0.5);
-  --stroke-input: #d7b;
+  --stroke-input: #aaa;
   --stroke: #d7b;
 }
 
@@ -1033,14 +1035,14 @@ body > div > nav + div > main > article + nav {
   --fill-1: #48e;
   --fill-2: #fff;
   --fill-alert: rgba(204, 204, 204, 0.5);
-  --fill-button: #47c linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.05));
+  --fill-button: #47c linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.025));
   --fill-code: #554;
-  --fill-input: #fff linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0));
+  --fill-input: #fff linear-gradient(rgba(0, 0, 0, 0.025), rgba(0, 0, 0, 0));
   --fill-mark: #dde;
   --fill: #47c;
   --stroke-1: #48e;
   --stroke-alert: rgba(0, 0, 0, 0.5);
-  --stroke-input: #36a;
+  --stroke-input: #aaa;
   --stroke: #46a;
 }
 
@@ -1064,14 +1066,14 @@ body > div > nav + div > main > article + nav {
   --fill-1: #8b2;
   --fill-2: #fff;
   --fill-alert: rgba(204, 204, 204, 0.5);
-  --fill-button: #692 linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.05));
+  --fill-button: #692 linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.025));
   --fill-code: #554;
-  --fill-input: #fff linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0));
+  --fill-input: #fff linear-gradient(rgba(0, 0, 0, 0.025), rgba(0, 0, 0, 0));
   --fill-mark: #eeb;
   --fill: #692;
   --stroke-1: #8b2;
   --stroke-alert: rgba(0, 0, 0, 0.5);
-  --stroke-input: #571;
+  --stroke-input: #aaa;
   --stroke: #571;
 }
 
@@ -1095,13 +1097,13 @@ body > div > nav + div > main > article + nav {
   --fill-1: #666;
   --fill-2: #fff;
   --fill-alert: rgba(204, 204, 204, 0.5);
-  --fill-button: #444 linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.05));
+  --fill-button: #444 linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.025));
   --fill-code: #555;
-  --fill-input: #fff linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0));
+  --fill-input: #fff linear-gradient(rgba(0, 0, 0, 0.025), rgba(0, 0, 0, 0));
   --fill-mark: #eee;
   --fill: #444;
   --stroke-1: #666;
   --stroke-alert: rgba(0, 0, 0, 0.5);
-  --stroke-input: #555;
+  --stroke-input: #aaa;
   --stroke: #555;
 }

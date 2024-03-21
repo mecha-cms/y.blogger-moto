@@ -335,7 +335,7 @@ input,
 select,
 textarea {
   accent-color: var(--color-link);
-  background: var(--fill-input, var(--fill));
+  background: var(--fill-input, var(--fill-2));
   border: 1px solid;
   border-color: var(--stroke-input, var(--stroke));
   color: var(--color-input);
@@ -478,7 +478,7 @@ body {
     margin: 0 auto;
     width: 692px;
     > footer {
-      background: var(--fill-1) linear-gradient(rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0)) repeat-x 0 0;
+      background: var(--fill-1) linear-gradient(rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0)) repeat-x 0 0;
       background-size: 20px 20px;
       color: var(--color-1);
       display: flex;
@@ -502,7 +502,7 @@ body {
       }
     }
     > header {
-      background: var(--fill-1) linear-gradient(rgba(255, 255, 255, 0.125), rgba(0, 0, 0, 0)) repeat-x 0 0;
+      background: var(--fill-1) linear-gradient(rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0)) repeat-x 0 0;
       background-size: 50px 50px;
       color: var(--color-1);
       padding: 15px 20px 23px;
@@ -540,7 +540,9 @@ body {
       }
     }
     > nav {
-      background: var(--color-1) linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.05));
+      background: var(--color-1);
+      border: 0 solid rgba(0, 0, 0, 0.05);
+      border-bottom-width: 1px;
       line-height: 2.7rem;
       margin: 0;
       > ul {
