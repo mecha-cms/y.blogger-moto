@@ -731,6 +731,10 @@ body > div > footer [role=link]:hover:visited {
 body > div > footer p {
   margin: 0;
 }
+body > div > footer p:only-child {
+  flex: 1;
+  text-align: right;
+}
 body > div > header {
   background: var(--fill-1) linear-gradient(rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0)) repeat-x 0 0;
   background-size: 50px 50px;
@@ -792,6 +796,12 @@ body > div > nav > ul > li > [role=link] {
   display: block;
   font-weight: bold;
   padding: 0 1.15rem;
+}
+body > div > nav > ul > li > a:focus,
+body > div > nav > ul > li > [role=link]:focus,
+body > div > nav > ul > li > a:hover,
+body > div > nav > ul > li > [role=link]:hover {
+  text-decoration: none;
 }
 body > div > header + div,
 body > div > nav + div {

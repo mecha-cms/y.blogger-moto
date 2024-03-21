@@ -22,6 +22,7 @@ Hook::set('_', function ($_) use ($state, $url) {
             'value' => $state->routeBlog
         ];
         $_['lot']['desk']['lot']['form']['lot'][1]['lot']['tabs']['lot']['blog']['lot']['fields']['lot']['skin'] = [
+            'flex' => false,
             'lot' => [
                 'do' => 'Daughter of Moto',
                 'mr' => 'Mr. Moto',

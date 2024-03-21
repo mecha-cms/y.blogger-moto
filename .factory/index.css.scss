@@ -499,6 +499,10 @@ body {
       }
       p {
         margin: 0;
+        &:only-child {
+          flex: 1;
+          text-align: right;
+        }
       }
     }
     > header {
@@ -556,6 +560,10 @@ body {
             display: block;
             font-weight: bold;
             padding: 0 1.15rem;
+            &:focus,
+            &:hover {
+              text-decoration: none;
+            }
           }
         }
       }
