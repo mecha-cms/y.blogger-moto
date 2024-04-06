@@ -783,6 +783,7 @@ body > div > nav {
   border-bottom-width: 1px;
   line-height: 2.7rem;
   margin: 0;
+  position: relative;
 }
 body > div > nav > ul {
   display: flex;
