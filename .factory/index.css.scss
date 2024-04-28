@@ -151,6 +151,10 @@ label {
   user-select: none;
 }
 
+p > label {
+  line-height: calc(2rem - 2px);
+}
+
 dfn,
 em,
 var {

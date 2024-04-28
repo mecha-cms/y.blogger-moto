@@ -167,6 +167,30 @@ details summary {
   user-select: none;
 }
 
+p > label,
+p > select,
+p > input[type=checkbox],
+p > button[type=checkbox],
+p > [type=checkbox][role=button],
+p > input[type=file],
+p > button[type=file],
+p > [type=file][role=button],
+p > input[type=radio],
+p > button[type=radio],
+p > [type=radio][role=button],
+p > input[type=range],
+p > button[type=range],
+p > [type=range][role=button],
+p > input[type=color],
+p > button[type=color],
+p > [type=color][role=button],
+p > input[type=image],
+p > button[type=image],
+p > [type=image][role=button],
+details p > summary {
+  line-height: calc(2rem - 2px);
+}
+
 dl,
 ol,
 ul {
