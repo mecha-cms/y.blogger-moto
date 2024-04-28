@@ -359,7 +359,6 @@ textarea {
   display: inline-block;
   height: 2rem;
   line-height: calc(2rem - 2px);
-  outline: 0;
   padding: 0 0.5rem;
   vertical-align: middle;
   width: 12rem;
