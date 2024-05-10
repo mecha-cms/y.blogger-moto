@@ -263,6 +263,14 @@ figure {
   }
 }
 
+form {
+  > p {
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
 h1,
 h2,
 h3,
