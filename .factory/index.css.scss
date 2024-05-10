@@ -6,7 +6,9 @@
 
 /*! Originally developed by the Blogger Team <https://www.blogger.com> on 23 February 2004. */
 
-* {
+*,
+::after,
+::before {
   background: 0 0;
   border: 0;
   box-sizing: border-box;
@@ -17,6 +19,80 @@
   text-align: inherit;
   text-decoration: none;
   word-wrap: break-word;
+}
+
+:where(
+  address,
+  article,
+  aside,
+  blockquote,
+  dd,
+  details,
+  div,
+  dl,
+  dt,
+  fieldset,
+  figure,
+  footer,
+  form,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  header,
+  hgroup,
+  hr,
+  main,
+  nav,
+  ol,
+  p,
+  pre,
+  search,
+  section,
+  table,
+  ul
+):where(:not(:last-child)) {
+  margin-bottom: 1.15rem;
+}
+
+li {
+  &:where(:not(:first-child)) {
+    > :where(
+      address,
+      article,
+      aside,
+      blockquote,
+      dd,
+      details,
+      div,
+      dl,
+      dt,
+      fieldset,
+      figure,
+      footer,
+      form,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      header,
+      hgroup,
+      hr,
+      main,
+      nav,
+      p,
+      pre,
+      search,
+      section,
+      table
+    ):where(:first-child) {
+      margin-top: 1.15rem;
+    }
+  }
 }
 
 :root {
@@ -87,7 +163,7 @@ blockquote {
 
 caption,
 figcaption {
-  margin: 0.5rem 0 0;
+  margin: 1rem 0 0;
   text-align: center;
 }
 
@@ -100,7 +176,7 @@ del {
 }
 
 details {
-  summary {
+  > summary {
     @extend label;
     display: block;
     padding-left: 1.15rem;
@@ -121,7 +197,8 @@ details {
     }
   }
   &[open] {
-    summary {
+    > summary {
+      margin-bottom: 1.15rem;
       &::before {
         border-bottom: 0 solid transparent;
         border-left: 4px solid transparent;
@@ -132,12 +209,14 @@ details {
     }
   }
   &[role='tree'] {
-    ul {
-      margin-top: 0;
-      list-style: none;
+    margin-bottom: 0;
+    &[open] {
+      > summary {
+        margin-bottom: 0;
+      }
     }
-    + [role='tree'] {
-      margin-top: 0;
+    ul {
+      list-style: none;
     }
   }
 }
@@ -226,9 +305,6 @@ hr {
 
 legend {
   padding: 0 0.5rem;
-  + * {
-    margin-top: 0;
-  }
 }
 
 mark {
@@ -295,44 +371,11 @@ ul {
 }
 
 audio,
+iframe,
 video {
   display: block;
   height: auto;
   width: 100%;
-}
-
-* {
-  + address,
-  + article,
-  + aside,
-  + blockquote,
-  + details,
-  + div,
-  + dl,
-  + dt,
-  + fieldset,
-  + figure,
-  + footer,
-  + form,
-  + h1,
-  + h2,
-  + h3,
-  + h4,
-  + h5,
-  + h6,
-  + header,
-  + hr,
-  + main,
-  + nav,
-  + ol,
-  + p,
-  + pre,
-  + search,
-  + section,
-  + table,
-  + ul {
-    margin-top: 1.15rem;
-  }
 }
 
 input,
@@ -512,6 +555,7 @@ body {
       background: var(--fill-1) linear-gradient(rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0)) repeat-x 0 0;
       background-size: 50px 50px;
       color: var(--color-1);
+      margin-bottom: 0;
       padding: 15px 20px 23px;
       position: relative;
       h1 {
@@ -609,6 +653,7 @@ body {
         }
         > main {
           flex: 1;
+          margin: 0;
           min-width: 0;
           > article {
             > div {

@@ -1,5 +1,7 @@
 /*! Originally developed by the Blogger Team <https://www.blogger.com> on 23 February 2004. */
-* {
+*,
+::after,
+::before {
   background: 0 0;
   border: 0;
   box-sizing: border-box;
@@ -10,6 +12,72 @@
   text-align: inherit;
   text-decoration: none;
   word-wrap: break-word;
+}
+
+:where(address,
+  article,
+  aside,
+  blockquote,
+  dd,
+  details,
+  div,
+  dl,
+  dt,
+  fieldset,
+  figure,
+  footer,
+  form,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  header,
+  hgroup,
+  hr,
+  main,
+  nav,
+  ol,
+  p,
+  pre,
+  search,
+  section,
+  table,
+  ul):where(:not(:last-child)) {
+  margin-bottom: 1.15rem;
+}
+
+li:where(:not(:first-child)) > :where(address,
+  article,
+  aside,
+  blockquote,
+  dd,
+  details,
+  div,
+  dl,
+  dt,
+  fieldset,
+  figure,
+  footer,
+  form,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  header,
+  hgroup,
+  hr,
+  main,
+  nav,
+  p,
+  pre,
+  search,
+  section,
+  table):where(:first-child) {
+  margin-top: 1.15rem;
 }
 
 :root {
@@ -100,7 +168,7 @@ blockquote {
 
 caption,
 figcaption {
-  margin: 0.5rem 0 0;
+  margin: 1rem 0 0;
   text-align: center;
 }
 
@@ -108,13 +176,13 @@ code {
   font-family: var(--face-2);
 }
 
-details summary {
+details > summary {
   display: block;
   padding-left: 1.15rem;
   position: relative;
   text-decoration: none !important;
 }
-details summary::before {
+details > summary::before {
   border-bottom: 4px solid transparent;
   border-left: 8px solid;
   border-right: 0 solid transparent;
@@ -127,19 +195,24 @@ details summary::before {
   top: 50%;
   width: 0;
 }
-details[open] summary::before {
+details[open] > summary {
+  margin-bottom: 1.15rem;
+}
+details[open] > summary::before {
   border-bottom: 0 solid transparent;
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
   border-top: 8px solid;
   margin-top: -3px;
 }
-details[role=tree] ul {
-  margin-top: 0;
-  list-style: none;
+details[role=tree] {
+  margin-bottom: 0;
 }
-details[role=tree] + [role=tree] {
-  margin-top: 0;
+details[role=tree][open] > summary {
+  margin-bottom: 0;
+}
+details[role=tree] ul {
+  list-style: none;
 }
 
 label,
@@ -162,7 +235,7 @@ button[type=color],
 input[type=image],
 button[type=image],
 [type=image][role=button],
-details summary {
+details > summary {
   cursor: pointer;
   user-select: none;
 }
@@ -186,8 +259,7 @@ p > button[type=color],
 p > [type=color][role=button],
 p > input[type=image],
 p > button[type=image],
-p > [type=image][role=button],
-details p > summary {
+p > [type=image][role=button] {
   line-height: calc(2rem - 2px);
 }
 
@@ -256,9 +328,6 @@ hr {
 legend {
   padding: 0 0.5rem;
 }
-legend + * {
-  margin-top: 0;
-}
 
 mark,
 [role=mark] {
@@ -323,42 +392,11 @@ ul {
 }
 
 audio,
+iframe,
 video {
   display: block;
   height: auto;
   width: 100%;
-}
-
-* + address,
-* + article,
-* + aside,
-* + blockquote,
-* + details,
-* + div,
-* + dl,
-* + dt,
-* + fieldset,
-* + figure,
-* + footer,
-* + form,
-* + h1,
-* + h2,
-* + h3,
-* + h4,
-* + h5,
-* + h6,
-* + header,
-* + hr,
-* + main,
-* + nav,
-* + ol,
-* + p,
-* + pre,
-* + search,
-* + section,
-* + table,
-* + ul {
-  margin-top: 1.15rem;
 }
 
 input,
@@ -508,9 +546,6 @@ textarea {
   border-color: var(--stroke-alert);
   padding: 0.25rem 0.75rem;
   text-align: center;
-}
-[role=alert] + article {
-  margin-top: 1.15rem;
 }
 [role=alert] a,
 [role=alert] [role=link] {
@@ -762,6 +797,7 @@ body > div > header {
   background: var(--fill-1) linear-gradient(rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0)) repeat-x 0 0;
   background-size: 50px 50px;
   color: var(--color-1);
+  margin-bottom: 0;
   padding: 15px 20px 23px;
   position: relative;
 }
@@ -870,6 +906,7 @@ body > div > nav + div > aside > div ul {
 body > div > header + div > main,
 body > div > nav + div > main {
   flex: 1;
+  margin: 0;
   min-width: 0;
 }
 body > div > header + div > main > article > div::after,
