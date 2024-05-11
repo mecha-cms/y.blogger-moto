@@ -21,6 +21,13 @@
   word-wrap: break-word;
 }
 
+::-moz-focus-inner {
+  border: 0;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+}
+
 :where(
   address,
   article,
@@ -53,8 +60,10 @@
   section,
   table,
   ul
-):where(:not(:last-child)) {
-  margin-bottom: 1.15rem;
+) {
+  & + & {
+    margin-top: 1.15rem;
+  }
 }
 
 li {
@@ -101,7 +110,7 @@ li {
   font: 400 normal 13px/1.5 var(--face);
 }
 
-a {
+%a {
   color: var(--color-link);
   font-weight: bold;
   img {
@@ -127,30 +136,59 @@ a {
   }
 }
 
+%b {
+  font-weight: bold;
+}
+
+%i {
+  font-style: italic;
+}
+
+%input {
+  accent-color: var(--color-link);
+  background: var(--fill-input, var(--fill-2));
+  border: 1px solid;
+  border-color: var(--stroke-input, var(--stroke));
+  color: var(--color-input);
+  display: inline-block;
+  height: 2rem;
+  line-height: calc(2rem - 2px); // Minus the border width
+  padding: 0 0.5rem;
+  vertical-align: middle;
+  width: 12rem;
+}
+
+%label {
+  cursor: pointer;
+  user-select: none;
+}
+
+%s {
+  text-decoration: line-through;
+}
+
+%small {
+  font-size: 0.79em;
+}
+
+%u {
+  text-decoration: underline;
+}
+
+a {
+  @extend %a;
+}
+
 abbr {
   cursor: help;
 }
 
-b {
-  font-weight: bold;
-}
-
-i {
-  font-style: italic;
-}
-
-s {
-  text-decoration: line-through;
-}
-
-u {
-  text-decoration: underline;
-}
-
+b,
 dt,
+legend,
 strong,
 th {
-  @extend b;
+  @extend %b;
 }
 
 blockquote {
@@ -171,13 +209,14 @@ code {
   font-family: var(--face-2);
 }
 
-del {
-  @extend s;
+del,
+s {
+  @extend %s;
 }
 
 details {
   > summary {
-    @extend label;
+    @extend %label;
     display: block;
     padding-left: 1.15rem;
     position: relative;
@@ -209,7 +248,6 @@ details {
     }
   }
   &[role='tree'] {
-    margin-bottom: 0;
     &[open] {
       > summary {
         margin-bottom: 0;
@@ -218,36 +256,41 @@ details {
     ul {
       list-style: none;
     }
+    + [role='tree'] {
+      margin-top: 0;
+    }
   }
 }
 
-ins {
-  @extend u;
+ins,
+u {
+  @extend %u;
 }
 
 label {
-  cursor: pointer;
-  user-select: none;
-}
-
-p > label {
-  line-height: calc(2rem - 2px);
+  @extend %label;
 }
 
 dfn,
 em,
+i,
 var {
-  @extend i;
+  @extend %i;
 }
 
-dl,
 ol,
 ul {
-  margin-left: 1.15rem;
+  margin-left: 2rem;
+  & & {
+    margin-left: 1.15rem;
+  }
 }
 
 dl {
-  margin-right: 1.15rem;
+  margin: {
+    left: 1.15rem;
+    right: 1.15rem;
+  }
 }
 
 fieldset {
@@ -265,8 +308,8 @@ figure {
 
 form {
   > p {
-    &:last-of-type {
-      margin-bottom: 0;
+    > label {
+      line-height: calc(2rem - 2px);
     }
   }
 }
@@ -277,7 +320,7 @@ h3,
 h4,
 h5,
 h6 {
-  @extend b;
+  @extend %b;
   line-height: 1.15;
 }
 
@@ -342,7 +385,7 @@ pre {
 small,
 sub,
 sup {
-  font-size: 0.79em;
+  @extend %small;
 }
 
 sub,
@@ -386,24 +429,14 @@ video {
   width: 100%;
 }
 
+button,
 input,
 select,
 textarea {
-  accent-color: var(--color-link);
-  background: var(--fill-input, var(--fill-2));
-  border: 1px solid;
-  border-color: var(--stroke-input, var(--stroke));
-  color: var(--color-input);
-  display: inline-block;
-  height: 2rem;
-  line-height: calc(2rem - 2px); // Minus the border width
-  padding: 0 0.5rem;
-  vertical-align: middle;
-  width: 12rem;
+  @extend %input;
 }
 
 button {
-  @extend input;
   background: var(--fill-button, var(--fill));
   border-width: 0;
   color: var(--color-button) !important;
@@ -419,26 +452,15 @@ button {
   width: auto;
 }
 
-input[type='button'],
-input[type='reset'],
-input[type='submit'] {
-  @extend button;
-}
-
-button,
 input {
-  &::-moz-focus-inner {
-    border: 0;
-    margin: 0;
-    outline: 0;
-    padding: 0;
+  &[type='button'],
+  &[type='reset'],
+  &[type='submit'] {
+    @extend button;
   }
-}
-
-input {
   &[type='color'],
   &[type='image'] {
-    @extend label;
+    @extend %label;
     height: 2.25rem;
     padding: 0;
     width: 2.25rem;
@@ -457,7 +479,7 @@ input {
   &[type='image'],
   &[type='radio'],
   &[type='range'] {
-    @extend label;
+    @extend %label;
     background: 0 0;
     border: 0;
     padding: 0;
@@ -465,7 +487,7 @@ input {
 }
 
 select {
-  @extend label;
+  @extend %label;
 }
 
 @each $v in (-moz-color-swatch, -webkit-color-swatch) {
@@ -488,8 +510,16 @@ textarea {
   resize: vertical;
 }
 
+:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 [role='button'] {
   @extend button;
+  &:not(:any-link) {
+    @extend :disabled;
+  }
 }
 
 [role='deletion'] {
@@ -513,13 +543,9 @@ textarea {
   font-weight: normal;
 }
 
-:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
 @import './_/x/alert';
 @import './_/x/comment';
+@import './_/x/markdown';
 @import './_/x/pass';
 @import './_/x/search';
 @import './_/x/t-o-c';
@@ -563,7 +589,6 @@ body {
       background: var(--fill-1) linear-gradient(rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0)) repeat-x 0 0;
       background-size: 50px 50px;
       color: var(--color-1);
-      margin-bottom: 0;
       padding: 15px 20px 23px;
       position: relative;
       h1 {
@@ -656,6 +681,7 @@ body {
             }
             ul {
               list-style-image: var(--bullet);
+              margin-left: 1.15rem;
             }
           }
         }

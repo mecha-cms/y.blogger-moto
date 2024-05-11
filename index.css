@@ -14,6 +14,13 @@
   word-wrap: break-word;
 }
 
+::-moz-focus-inner {
+  border: 0;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+}
+
 :where(address,
   article,
   aside,
@@ -44,8 +51,38 @@
   search,
   section,
   table,
-  ul):where(:not(:last-child)) {
-  margin-bottom: 1.15rem;
+  ul) + :where(address,
+  article,
+  aside,
+  blockquote,
+  dd,
+  details,
+  div,
+  dl,
+  dt,
+  fieldset,
+  figure,
+  footer,
+  form,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  header,
+  hgroup,
+  hr,
+  main,
+  nav,
+  ol,
+  p,
+  pre,
+  search,
+  section,
+  table,
+  ul) {
+  margin-top: 1.15rem;
 }
 
 li:where(:not(:first-child)) > :where(address,
@@ -124,40 +161,82 @@ a[aria-disabled]:visited,
   color: inherit;
 }
 
-abbr {
-  cursor: help;
-}
-
-b,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6,
+b,
 dt,
+legend,
 strong,
 th {
   font-weight: bold;
 }
 
-i,
 dfn,
 em,
+i,
 var {
   font-style: italic;
 }
 
-s,
+button,
+[role=button],
+input[type=button],
+input[type=reset],
+input[type=submit],
+input,
+select,
+textarea {
+  accent-color: var(--color-link);
+  background: var(--fill-input, var(--fill-2));
+  border: 1px solid;
+  border-color: var(--stroke-input, var(--stroke));
+  color: var(--color-input);
+  display: inline-block;
+  height: 2rem;
+  line-height: calc(2rem - 2px);
+  padding: 0 0.5rem;
+  vertical-align: middle;
+  width: 12rem;
+}
+
+select,
+input[type=checkbox],
+input[type=file],
+input[type=radio],
+input[type=range],
+input[type=color],
+input[type=image],
+label,
+details > summary {
+  cursor: pointer;
+  user-select: none;
+}
+
 del,
-[role=deletion] {
+[role=deletion],
+s {
   text-decoration: line-through;
 }
 
-u,
+[role=doc-endnotes],
+small,
+sub,
+sup {
+  font-size: 0.79em;
+}
+
 ins,
-[role=insertion] {
+[role=insertion],
+u {
   text-decoration: underline;
+}
+
+abbr {
+  cursor: help;
 }
 
 blockquote {
@@ -205,71 +284,29 @@ details[open] > summary::before {
   border-top: 8px solid;
   margin-top: -3px;
 }
-details[role=tree] {
-  margin-bottom: 0;
-}
 details[role=tree][open] > summary {
   margin-bottom: 0;
 }
 details[role=tree] ul {
   list-style: none;
 }
-
-label,
-select,
-input[type=checkbox],
-button[type=checkbox],
-[type=checkbox][role=button],
-input[type=file],
-button[type=file],
-[type=file][role=button],
-input[type=radio],
-button[type=radio],
-[type=radio][role=button],
-input[type=range],
-button[type=range],
-[type=range][role=button],
-input[type=color],
-button[type=color],
-[type=color][role=button],
-input[type=image],
-button[type=image],
-[type=image][role=button],
-details > summary {
-  cursor: pointer;
-  user-select: none;
+details[role=tree] + [role=tree] {
+  margin-top: 0;
 }
 
-p > label,
-p > select,
-p > input[type=checkbox],
-p > button[type=checkbox],
-p > [type=checkbox][role=button],
-p > input[type=file],
-p > button[type=file],
-p > [type=file][role=button],
-p > input[type=radio],
-p > button[type=radio],
-p > [type=radio][role=button],
-p > input[type=range],
-p > button[type=range],
-p > [type=range][role=button],
-p > input[type=color],
-p > button[type=color],
-p > [type=color][role=button],
-p > input[type=image],
-p > button[type=image],
-p > [type=image][role=button] {
-  line-height: calc(2rem - 2px);
-}
-
-dl,
 ol,
 ul {
+  margin-left: 2rem;
+}
+ol ol,
+ol ul,
+ul ol,
+ul ul {
   margin-left: 1.15rem;
 }
 
 dl {
+  margin-left: 1.15rem;
   margin-right: 1.15rem;
 }
 
@@ -286,8 +323,8 @@ figure img {
   display: block;
 }
 
-form > p:last-of-type {
-  margin-bottom: 0;
+form > p > label {
+  line-height: calc(2rem - 2px);
 }
 
 h1,
@@ -356,12 +393,6 @@ pre code {
   white-space: pre-wrap;
 }
 
-small,
-sub,
-sup {
-  font-size: 0.79em;
-}
-
 sub,
 sup {
   line-height: 0;
@@ -403,44 +434,11 @@ video {
   width: 100%;
 }
 
-input,
 button,
 [role=button],
-[type=button][role=button],
-[type=reset][role=button],
-[type=submit][role=button],
 input[type=button],
-button[type=button],
 input[type=reset],
-button[type=reset],
-input[type=submit],
-button[type=submit],
-select,
-textarea {
-  accent-color: var(--color-link);
-  background: var(--fill-input, var(--fill-2));
-  border: 1px solid;
-  border-color: var(--stroke-input, var(--stroke));
-  color: var(--color-input);
-  display: inline-block;
-  height: 2rem;
-  line-height: calc(2rem - 2px);
-  padding: 0 0.5rem;
-  vertical-align: middle;
-  width: 12rem;
-}
-
-button,
-[role=button],
-[type=button][role=button],
-[type=reset][role=button],
-[type=submit][role=button],
-input[type=button],
-button[type=button],
-input[type=reset],
-button[type=reset],
-input[type=submit],
-button[type=submit] {
+input[type=submit] {
   background: var(--fill-button, var(--fill));
   border-width: 0;
   color: var(--color-button) !important;
@@ -454,61 +452,26 @@ button[type=submit] {
   width: auto;
 }
 
-button::-moz-focus-inner,
-[role=button]::-moz-focus-inner,
-input[type=button]::-moz-focus-inner,
-button[type=button]::-moz-focus-inner,
-input[type=reset]::-moz-focus-inner,
-button[type=reset]::-moz-focus-inner,
-input[type=submit]::-moz-focus-inner,
-button[type=submit]::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
-  margin: 0;
-  outline: 0;
-  padding: 0;
-}
-
 input[type=color],
-button[type=color],
-[type=color][role=button],
-input[type=image],
-button[type=image],
-[type=image][role=button] {
+input[type=image] {
   height: 2.25rem;
   padding: 0;
   width: 2.25rem;
 }
-input[type=image],
-button[type=image],
-[type=image][role=button] {
+input[type=image] {
   height: auto;
   width: auto;
 }
 input[type=checkbox],
-button[type=checkbox],
-[type=checkbox][role=button],
-input[type=radio],
-button[type=radio],
-[type=radio][role=button] {
+input[type=radio] {
   height: 1rem;
   width: 1rem;
 }
 input[type=checkbox],
-button[type=checkbox],
-[type=checkbox][role=button],
 input[type=file],
-button[type=file],
-[type=file][role=button],
 input[type=image],
-button[type=image],
-[type=image][role=button],
 input[type=radio],
-button[type=radio],
-[type=radio][role=button],
-input[type=range],
-button[type=range],
-[type=range][role=button] {
+input[type=range] {
   background: 0 0;
   border: 0;
   padding: 0;
@@ -534,14 +497,15 @@ textarea {
   resize: vertical;
 }
 
+:disabled,
+[role=button]:not(:any-link) {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 [role=status] {
   color: var(--color);
   font-weight: normal;
-}
-
-:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
 }
 
 [role=alert] {
@@ -576,8 +540,6 @@ textarea {
 }
 
 .form-comment p input + br + small,
-.form-comment p button + br + small,
-.form-comment p [role=button] + br + small,
 .form-comment p select + br + small,
 .form-comment p textarea + br + small {
   color: var(--color-2);
@@ -590,150 +552,15 @@ form[name=pass] {
 search {
   display: block;
 }
-search input,
-search button,
-search input[type=button],
-search button[type=button],
-search input[type=reset],
-search button[type=reset],
-search input[type=submit],
-search button[type=submit],
-search [role=button] {
+search input {
   flex: 1;
   min-width: 0;
 }
 search input + button,
-search button + button,
-search input[type=button] + button,
-search button[type=button] + button,
-search input[type=reset] + button,
-search button[type=reset] + button,
-search input[type=submit] + button,
-search button[type=submit] + button,
-search [role=button] + button,
-search [type=button][role=button] + button,
-search [type=reset][role=button] + button,
-search [type=submit][role=button] + button,
 search input + input[type=button],
-search button + input[type=button],
-search input[type=button] + input[type=button],
-search button[type=button] + input[type=button],
-search input[type=reset] + input[type=button],
-search button[type=reset] + input[type=button],
-search input[type=submit] + input[type=button],
-search button[type=submit] + input[type=button],
-search [role=button] + input[type=button],
-search [type=button][role=button] + input[type=button],
-search [type=reset][role=button] + input[type=button],
-search [type=submit][role=button] + input[type=button],
-search input + button[type=button],
-search button + button[type=button],
-search input[type=button] + button[type=button],
-search button[type=button] + button[type=button],
-search input[type=reset] + button[type=button],
-search button[type=reset] + button[type=button],
-search input[type=submit] + button[type=button],
-search button[type=submit] + button[type=button],
-search [role=button] + button[type=button],
-search [type=button][role=button] + button[type=button],
-search [type=reset][role=button] + button[type=button],
-search [type=submit][role=button] + button[type=button],
 search input + input[type=reset],
-search button + input[type=reset],
-search input[type=button] + input[type=reset],
-search button[type=button] + input[type=reset],
-search input[type=reset] + input[type=reset],
-search button[type=reset] + input[type=reset],
-search input[type=submit] + input[type=reset],
-search button[type=submit] + input[type=reset],
-search [role=button] + input[type=reset],
-search [type=button][role=button] + input[type=reset],
-search [type=reset][role=button] + input[type=reset],
-search [type=submit][role=button] + input[type=reset],
-search input + button[type=reset],
-search button + button[type=reset],
-search input[type=button] + button[type=reset],
-search button[type=button] + button[type=reset],
-search input[type=reset] + button[type=reset],
-search button[type=reset] + button[type=reset],
-search input[type=submit] + button[type=reset],
-search button[type=submit] + button[type=reset],
-search [role=button] + button[type=reset],
-search [type=button][role=button] + button[type=reset],
-search [type=reset][role=button] + button[type=reset],
-search [type=submit][role=button] + button[type=reset],
 search input + input[type=submit],
-search button + input[type=submit],
-search input[type=button] + input[type=submit],
-search button[type=button] + input[type=submit],
-search input[type=reset] + input[type=submit],
-search button[type=reset] + input[type=submit],
-search input[type=submit] + input[type=submit],
-search button[type=submit] + input[type=submit],
-search [role=button] + input[type=submit],
-search [type=button][role=button] + input[type=submit],
-search [type=reset][role=button] + input[type=submit],
-search [type=submit][role=button] + input[type=submit],
-search input + button[type=submit],
-search button + button[type=submit],
-search input[type=button] + button[type=submit],
-search button[type=button] + button[type=submit],
-search input[type=reset] + button[type=submit],
-search button[type=reset] + button[type=submit],
-search input[type=submit] + button[type=submit],
-search button[type=submit] + button[type=submit],
-search [role=button] + button[type=submit],
-search [type=button][role=button] + button[type=submit],
-search [type=reset][role=button] + button[type=submit],
-search [type=submit][role=button] + button[type=submit],
-search input + [role=button],
-search button + [role=button],
-search input[type=button] + [role=button],
-search button[type=button] + [role=button],
-search input[type=reset] + [role=button],
-search button[type=reset] + [role=button],
-search input[type=submit] + [role=button],
-search button[type=submit] + [role=button],
-search [role=button] + [role=button],
-search [type=button][role=button] + [role=button],
-search [type=reset][role=button] + [role=button],
-search [type=submit][role=button] + [role=button],
-search input + [type=button][role=button],
-search button + [type=button][role=button],
-search input[type=button] + [type=button][role=button],
-search button[type=button] + [type=button][role=button],
-search input[type=reset] + [type=button][role=button],
-search button[type=reset] + [type=button][role=button],
-search input[type=submit] + [type=button][role=button],
-search button[type=submit] + [type=button][role=button],
-search [role=button] + [type=button][role=button],
-search [type=button][role=button] + [type=button][role=button],
-search [type=reset][role=button] + [type=button][role=button],
-search [type=submit][role=button] + [type=button][role=button],
-search input + [type=reset][role=button],
-search button + [type=reset][role=button],
-search input[type=button] + [type=reset][role=button],
-search button[type=button] + [type=reset][role=button],
-search input[type=reset] + [type=reset][role=button],
-search button[type=reset] + [type=reset][role=button],
-search input[type=submit] + [type=reset][role=button],
-search button[type=submit] + [type=reset][role=button],
-search [role=button] + [type=reset][role=button],
-search [type=button][role=button] + [type=reset][role=button],
-search [type=reset][role=button] + [type=reset][role=button],
-search [type=submit][role=button] + [type=reset][role=button],
-search input + [type=submit][role=button],
-search button + [type=submit][role=button],
-search input[type=button] + [type=submit][role=button],
-search button[type=button] + [type=submit][role=button],
-search input[type=reset] + [type=submit][role=button],
-search button[type=reset] + [type=submit][role=button],
-search input[type=submit] + [type=submit][role=button],
-search button[type=submit] + [type=submit][role=button],
-search [role=button] + [type=submit][role=button],
-search [type=button][role=button] + [type=submit][role=button],
-search [type=reset][role=button] + [type=submit][role=button],
-search [type=submit][role=button] + [type=submit][role=button] {
+search input + [role=button] {
   flex: initial;
 }
 search p {
@@ -801,7 +628,6 @@ body > div > header {
   background: var(--fill-1) linear-gradient(rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0)) repeat-x 0 0;
   background-size: 50px 50px;
   color: var(--color-1);
-  margin-bottom: 0;
   padding: 15px 20px 23px;
   position: relative;
 }
@@ -906,6 +732,7 @@ body > div > nav + div > aside > div h3 {
 body > div > header + div > aside > div ul,
 body > div > nav + div > aside > div ul {
   list-style-image: var(--bullet);
+  margin-left: 1.15rem;
 }
 body > div > header + div > main,
 body > div > nav + div > main {
