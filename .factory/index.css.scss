@@ -222,10 +222,12 @@ details {
     position: relative;
     text-decoration: none !important;
     &::before {
-      border-bottom: 4px solid transparent;
-      border-left: 8px solid;
-      border-right: 0 solid transparent;
-      border-top: 4px solid transparent;
+      border: {
+        bottom: 4px solid transparent;
+        left: 8px solid;
+        right: 0 solid transparent;
+        top: 4px solid transparent;
+      }
       content: "";
       height: 0;
       left: 0;
@@ -239,10 +241,12 @@ details {
     > summary {
       margin-bottom: 1.15rem;
       &::before {
-        border-bottom: 0 solid transparent;
-        border-left: 4px solid transparent;
-        border-right: 4px solid transparent;
-        border-top: 8px solid;
+        border: {
+          bottom: 0 solid transparent;
+          left: 4px solid transparent;
+          right: 4px solid transparent;
+          top: 8px solid;
+        }
         margin-top: -3px;
       }
     }
@@ -350,8 +354,10 @@ h6 {
 
 hr {
   border: 0;
-  border-top: 1px dotted;
-  border-color: var(--stroke);
+  border: {
+    top: 1px dotted;
+    color: var(--stroke);
+  }
 }
 
 legend {
