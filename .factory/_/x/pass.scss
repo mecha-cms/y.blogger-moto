@@ -1,3 +1,5 @@
-form[name='pass'] {
-  padding: 16px;
+form {
+  &[name='pass'] {
+    padding: 16px;
+  }
 }

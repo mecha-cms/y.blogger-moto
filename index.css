@@ -252,7 +252,7 @@ figcaption {
 }
 
 code {
-  font-family: var(--face-2);
+  font-family: var(--face-1);
 }
 
 details > summary {
@@ -294,6 +294,11 @@ details[role=tree] + [role=tree] {
   margin-top: 0;
 }
 
+dl {
+  margin-left: 1.15rem;
+  margin-right: 1.15rem;
+}
+
 ol,
 ul {
   margin-left: 2rem;
@@ -303,11 +308,6 @@ ol ul,
 ul ol,
 ul ul {
   margin-left: 1.15rem;
-}
-
-dl {
-  margin-left: 1.15rem;
-  margin-right: 1.15rem;
 }
 
 fieldset {
@@ -321,6 +321,8 @@ figure {
 }
 figure img {
   display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 form > p > label {
@@ -361,7 +363,6 @@ h6 {
 }
 
 hr {
-  border: 0;
   border-top: 1px dotted;
   border-color: var(--stroke);
 }
@@ -428,6 +429,7 @@ ul {
 
 audio,
 iframe,
+picture,
 video {
   display: block;
   height: auto;
@@ -599,7 +601,7 @@ body > div > footer {
   gap: 1.15rem;
   justify-content: space-between;
   margin: 0;
-  padding: 15px 20px 23px;
+  padding: 15px 20px;
 }
 body > div > footer a,
 body > div > footer [role=link] {
@@ -731,7 +733,7 @@ body > div > nav + div > aside > div h3 {
 }
 body > div > header + div > aside > div ul,
 body > div > nav + div > aside > div ul {
-  list-style-image: var(--bullet);
+  list-style-image: var(--icon-bullet);
   margin-left: 1.15rem;
 }
 body > div > header + div > main,
@@ -825,7 +827,6 @@ body > div > nav + div > main > article + nav {
   }
 }
 .skin\:do {
-  --bullet: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAASklEQVQYV2NkwALOhLr8N1m9hxFdCkMAphCbBhTF6ArRNcAV41KIrAGsGJfV6OKM2BQim4YsT5rJsOAh2s2ENMDkyQ9ndBvQYxAAdnaCcBsn+6wAAAAASUVORK5CYII=");
   --color-1: #fee;
   --color-button: #fff;
   --color-code: #fff;
@@ -838,8 +839,7 @@ body > div > nav + div > main > article + nav {
   --color-title-link: #c53;
   --color-title: inherit;
   --color: #554;
-  --face-1: Tahoma, Geneva, Verdana, sans-serif;
-  --face-2: "Courier New", Courier, monospace;
+  --face-1: "Courier New", Courier, monospace;
   --face: Tahoma, Geneva, Verdana, sans-serif;
   --fill-1: #c54;
   --fill-2: #fff;
@@ -849,6 +849,7 @@ body > div > nav + div > main > article + nav {
   --fill-input: #fff linear-gradient(rgba(0, 0, 0, 0.025), rgba(0, 0, 0, 0));
   --fill-mark: #dde;
   --fill: #c43;
+  --icon-bullet: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAASklEQVQYV2NkwALOhLr8N1m9hxFdCkMAphCbBhTF6ArRNcAV41KIrAGsGJfV6OKM2BQim4YsT5rJsOAh2s2ENMDkyQ9ndBvQYxAAdnaCcBsn+6wAAAAASUVORK5CYII=");
   --stroke-1: #c54;
   --stroke-alert: rgba(0, 0, 0, 0.5);
   --stroke-input: #aaa;
@@ -856,7 +857,6 @@ body > div > nav + div > main > article + nav {
 }
 
 .skin\:mr {
-  --bullet: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAASklEQVQYV2NkwAJmzuz4n55ewYguhSEAU4hNA4pidIXoGuCKcSlE1gBWjMtqdHFGbAqRTUOWJ81kWPAQ7WZCGmDy5Iczug3oMQgA7DOCxQs/NDwAAAAASUVORK5CYII=");
   --color-1: #ffe;
   --color-button: #fff;
   --color-code: #fff;
@@ -869,8 +869,7 @@ body > div > nav + div > main > article + nav {
   --color-title-link: #998;
   --color-title: inherit;
   --color: #555;
-  --face-1: Tahoma, Geneva, Verdana, sans-serif;
-  --face-2: "Courier New", Courier, monospace;
+  --face-1: "Courier New", Courier, monospace;
   --face: Tahoma, Geneva, Verdana, sans-serif;
   --fill-1: #ccb;
   --fill-2: #fff;
@@ -880,6 +879,7 @@ body > div > nav + div > main > article + nav {
   --fill-input: #fff linear-gradient(rgba(0, 0, 0, 0.025), rgba(0, 0, 0, 0));
   --fill-mark: #eee;
   --fill: #bba;
+  --icon-bullet: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAASklEQVQYV2NkwAJmzuz4n55ewYguhSEAU4hNA4pidIXoGuCKcSlE1gBWjMtqdHFGbAqRTUOWJ81kWPAQ7WZCGmDy5Iczug3oMQgA7DOCxQs/NDwAAAAASUVORK5CYII=");
   --stroke-1: #ccb;
   --stroke-alert: rgba(0, 0, 0, 0.5);
   --stroke-input: #aaa;
@@ -887,7 +887,6 @@ body > div > nav + div > main > article + nav {
 }
 
 .skin\:ms {
-  --bullet: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAASklEQVQYV2NkwALulu/+r9zpyoguhSEAU4hNA4pidIXoGuCKcSlE1gBWjMtqdHFGbAqRTUOWJ81kWPAQ7WZCGmDy5Iczug3oMQgAYoeDGqRV4U0AAAAASUVORK5CYII=");
   --color-1: #fef;
   --color-button: #fff;
   --color-code: #fff;
@@ -900,8 +899,7 @@ body > div > nav + div > main > article + nav {
   --color-title-link: #c28;
   --color-title: inherit;
   --color: #555;
-  --face-1: Tahoma, Geneva, Verdana, sans-serif;
-  --face-2: "Courier New", Courier, monospace;
+  --face-1: "Courier New", Courier, monospace;
   --face: Tahoma, Geneva, Verdana, sans-serif;
   --fill-1: #e8b;
   --fill-2: #fff;
@@ -911,6 +909,7 @@ body > div > nav + div > main > article + nav {
   --fill-input: #fff linear-gradient(rgba(0, 0, 0, 0.025), rgba(0, 0, 0, 0));
   --fill-mark: #ebe;
   --fill: #d7b;
+  --icon-bullet: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAASklEQVQYV2NkwALulu/+r9zpyoguhSEAU4hNA4pidIXoGuCKcSlE1gBWjMtqdHFGbAqRTUOWJ81kWPAQ7WZCGmDy5Iczug3oMQgAYoeDGqRV4U0AAAAASUVORK5CYII=");
   --stroke-1: #e8b;
   --stroke-alert: rgba(0, 0, 0, 0.5);
   --stroke-input: #aaa;
@@ -918,7 +917,6 @@ body > div > nav + div > main > article + nav {
 }
 
 .skin\:mx {
-  --bullet: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAASklEQVQYV2NkwAJcOt7931MhxIguhSEAU4hNA4pidIXoGuCKcSlE1gBWjMtqdHFGbAqRTUOWJ81kWPAQ7WZCGmDy5Iczug3oMQgA63iCxXdHmM0AAAAASUVORK5CYII=");
   --color-1: #eef;
   --color-button: #fff;
   --color-code: #fff;
@@ -931,8 +929,7 @@ body > div > nav + div > main > article + nav {
   --color-title-link: #47c;
   --color-title: inherit;
   --color: #554;
-  --face-1: Tahoma, Geneva, Verdana, sans-serif;
-  --face-2: "Courier New", Courier, monospace;
+  --face-1: "Courier New", Courier, monospace;
   --face: Tahoma, Geneva, Verdana, sans-serif;
   --fill-1: #48e;
   --fill-2: #fff;
@@ -942,6 +939,7 @@ body > div > nav + div > main > article + nav {
   --fill-input: #fff linear-gradient(rgba(0, 0, 0, 0.025), rgba(0, 0, 0, 0));
   --fill-mark: #dde;
   --fill: #47c;
+  --icon-bullet: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAASklEQVQYV2NkwAJcOt7931MhxIguhSEAU4hNA4pidIXoGuCKcSlE1gBWjMtqdHFGbAqRTUOWJ81kWPAQ7WZCGmDy5Iczug3oMQgA63iCxXdHmM0AAAAASUVORK5CYII=");
   --stroke-1: #48e;
   --stroke-alert: rgba(0, 0, 0, 0.5);
   --stroke-input: #aaa;
@@ -949,7 +947,6 @@ body > div > nav + div > main > article + nav {
 }
 
 .skin\:so {
-  --bullet: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAASklEQVQYV2NkwAI6div9r3C9x4guhSEAU4hNA4pidIXoGuCKcSlE1gBWjMtqdHFGbAqRTUOWJ81kWPAQ7WZCGmDy5Iczug3oMQgAdlSCcPN9bq0AAAAASUVORK5CYII=");
   --color-1: #ffe;
   --color-button: #fff;
   --color-code: #fff;
@@ -962,8 +959,7 @@ body > div > nav + div > main > article + nav {
   --color-title-link: #692;
   --color-title: inherit;
   --color: #554;
-  --face-1: Tahoma, Geneva, Verdana, sans-serif;
-  --face-2: "Courier New", Courier, monospace;
+  --face-1: "Courier New", Courier, monospace;
   --face: Tahoma, Geneva, Verdana, sans-serif;
   --fill-1: #8b2;
   --fill-2: #fff;
@@ -973,6 +969,7 @@ body > div > nav + div > main > article + nav {
   --fill-input: #fff linear-gradient(rgba(0, 0, 0, 0.025), rgba(0, 0, 0, 0));
   --fill-mark: #eeb;
   --fill: #692;
+  --icon-bullet: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAASklEQVQYV2NkwAI6div9r3C9x4guhSEAU4hNA4pidIXoGuCKcSlE1gBWjMtqdHFGbAqRTUOWJ81kWPAQ7WZCGmDy5Iczug3oMQgAdlSCcPN9bq0AAAAASUVORK5CYII=");
   --stroke-1: #8b2;
   --stroke-alert: rgba(0, 0, 0, 0.5);
   --stroke-input: #aaa;
@@ -980,7 +977,6 @@ body > div > nav + div > main > article + nav {
 }
 
 .skin\:wo {
-  --bullet: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAASklEQVQYV2NkwALS0tL+z5o1ixFdCkMAphCbBhTF6ArRNcAV41KIrAGsGJfV6OKM2BQim4YsT5rJsOAh2s2ENMDkyQ9ndBvQYxAALwKCPaP2Y14AAAAASUVORK5CYII=");
   --color-1: #eee;
   --color-button: #fff;
   --color-code: #fff;
@@ -993,8 +989,7 @@ body > div > nav + div > main > article + nav {
   --color-title-link: #777;
   --color-title: inherit;
   --color: #555;
-  --face-1: Tahoma, Geneva, Verdana, sans-serif;
-  --face-2: "Courier New", Courier, monospace;
+  --face-1: "Courier New", Courier, monospace;
   --face: Tahoma, Geneva, Verdana, sans-serif;
   --fill-1: #666;
   --fill-2: #fff;
@@ -1004,6 +999,7 @@ body > div > nav + div > main > article + nav {
   --fill-input: #fff linear-gradient(rgba(0, 0, 0, 0.025), rgba(0, 0, 0, 0));
   --fill-mark: #eee;
   --fill: #444;
+  --icon-bullet: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAASklEQVQYV2NkwALS0tL+z5o1ixFdCkMAphCbBhTF6ArRNcAV41KIrAGsGJfV6OKM2BQim4YsT5rJsOAh2s2ENMDkyQ9ndBvQYxAALwKCPaP2Y14AAAAASUVORK5CYII=");
   --stroke-1: #666;
   --stroke-alert: rgba(0, 0, 0, 0.5);
   --stroke-input: #aaa;
