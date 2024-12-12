@@ -1,3 +1,6 @@
+@use 'skin';
+@use 'x';
+
 @mixin clear() {
   clear: both;
   content: "";
@@ -553,13 +556,13 @@ textarea {
   font-weight: normal;
 }
 
-@import './_/x/alert';
-@import './_/x/comment';
-@import './_/x/markdown';
-@import './_/x/pass';
-@import './_/x/search';
-@import './_/x/t-o-c';
-@import './_/x/user';
+@include x.alert;
+@include x.comment;
+@include x.markdown;
+@include x.pass;
+@include x.search;
+@include x.t-o-c;
+@include x.user;
 
 body {
   > div {
@@ -755,9 +758,9 @@ body {
   }
 }
 
-@import './_/do';
-@import './_/mr';
-@import './_/ms';
-@import './_/mx';
-@import './_/so';
-@import './_/wo';
+@include skin.do;
+@include skin.mr;
+@include skin.ms;
+@include skin.mx;
+@include skin.so;
+@include skin.wo;

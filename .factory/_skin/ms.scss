@@ -1,0 +1,31 @@
+@mixin ms {
+  .skin\:ms {
+    --color-1: #fef;
+    --color-button: #fff;
+    --color-code: #fff;
+    --color-input: #555;
+    --color-link-1: #e8b;
+    --color-link-2: #e8b;
+    --color-link: #c28;
+    --color-title-link-1: #e8b;
+    --color-title-link-2: #e8b;
+    --color-title-link: #c28;
+    --color-title: inherit;
+    --color: #555;
+    --face-1: 'Courier New', Courier, monospace;
+    --face: Tahoma, Geneva, Verdana, sans-serif;
+    --fill-1: #e8b;
+    --fill-2: #fff;
+    --fill-alert: rgba(204, 204, 204, 0.5);
+    --fill-button: #d7b linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.025));
+    --fill-code: #555;
+    --fill-input: #fff linear-gradient(rgba(0, 0, 0, 0.025), rgba(0, 0, 0, 0));
+    --fill-mark: #ebe;
+    --fill: #d7b;
+    --icon-bullet: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAASklEQVQYV2NkwALulu/+r9zpyoguhSEAU4hNA4pidIXoGuCKcSlE1gBWjMtqdHFGbAqRTUOWJ81kWPAQ7WZCGmDy5Iczug3oMQgAYoeDGqRV4U0AAAAASUVORK5CYII=');
+    --stroke-1: #e8b;
+    --stroke-alert: rgba(0, 0, 0, 0.5);
+    --stroke-input: #aaa;
+    --stroke: #d7b;
+  }
+}

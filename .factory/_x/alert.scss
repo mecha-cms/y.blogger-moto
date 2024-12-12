@@ -1,0 +1,12 @@
+@mixin alert {
+  [role='alert'] {
+    background: var(--fill-alert);
+    border: 1px solid;
+    border-color: var(--stroke-alert);
+    padding: 0.25rem 0.75rem;
+    text-align: center;
+    a {
+      text-decoration: underline;
+    }
+  }
+}

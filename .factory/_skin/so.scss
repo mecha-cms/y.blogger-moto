@@ -1,0 +1,31 @@
+@mixin so {
+  .skin\:so {
+    --color-1: #ffe;
+    --color-button: #fff;
+    --color-code: #fff;
+    --color-input: #554;
+    --color-link-1: #8b2;
+    --color-link-2: #8b2;
+    --color-link: #692;
+    --color-title-link-1: #8b2;
+    --color-title-link-2: #8b2;
+    --color-title-link: #692;
+    --color-title: inherit;
+    --color: #554;
+    --face-1: 'Courier New', Courier, monospace;
+    --face: Tahoma, Geneva, Verdana, sans-serif;
+    --fill-1: #8b2;
+    --fill-2: #fff;
+    --fill-alert: rgba(204, 204, 204, 0.5);
+    --fill-button: #692 linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.025));
+    --fill-code: #554;
+    --fill-input: #fff linear-gradient(rgba(0, 0, 0, 0.025), rgba(0, 0, 0, 0));
+    --fill-mark: #eeb;
+    --fill: #692;
+    --icon-bullet: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAASklEQVQYV2NkwAI6div9r3C9x4guhSEAU4hNA4pidIXoGuCKcSlE1gBWjMtqdHFGbAqRTUOWJ81kWPAQ7WZCGmDy5Iczug3oMQgAdlSCcPN9bq0AAAAASUVORK5CYII=');
+    --stroke-1: #8b2;
+    --stroke-alert: rgba(0, 0, 0, 0.5);
+    --stroke-input: #aaa;
+    --stroke: #571;
+  }
+}
