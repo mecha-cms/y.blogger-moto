@@ -16,7 +16,7 @@ Hook::set('_', function ($_) use ($state, $url) {
             'description' => 'Choose default page for the blog route.',
             'lot' => $lot,
             'name' => 'state[route-blog]',
-            'stack' => 20,
+            'stack' => 10,
             'title' => 'Route',
             'type' => 'option',
             'value' => $state->routeBlog
@@ -32,7 +32,7 @@ Hook::set('_', function ($_) use ($state, $url) {
                 'wo' => 'Shadow of Moto'
             ],
             'name' => 'state[y][blogger-moto][skin][name]',
-            'stack' => 30,
+            'stack' => 20,
             'title' => 'Skin',
             'type' => 'item',
             'value' => $state->y->{'blogger-moto'}->skin->name ?? 'mr'
