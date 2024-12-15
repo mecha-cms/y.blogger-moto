@@ -128,11 +128,6 @@ a,
   color: var(--color-link);
   font-weight: bold;
 }
-a img,
-[role=link] img {
-  background: var(--stroke-1);
-  padding: 4px;
-}
 a:focus,
 [role=link]:focus,
 a:hover,
@@ -233,6 +228,12 @@ ins,
 [role=insertion],
 u {
   text-decoration: underline;
+}
+
+a img,
+[role=link] img {
+  background: var(--stroke-1);
+  padding: 4px;
 }
 
 abbr {
@@ -339,27 +340,27 @@ h6 {
 }
 
 h1 {
-  font-size: 310%;
+  font-size: 260%;
 }
 
 h2 {
-  font-size: 250%;
-}
-
-h3 {
   font-size: 200%;
 }
 
+h3 {
+  font-size: 150%;
+}
+
 h4 {
-  font-size: 160%;
+  font-size: 110%;
 }
 
 h5 {
-  font-size: 130%;
+  font-size: 80%;
 }
 
 h6 {
-  font-size: 110%;
+  font-size: 60%;
 }
 
 hr {
