@@ -1,5 +1,5 @@
 ---
-title: Blogger: Moto
+title: 'Blogger: Moto'
 description: Moto (classic Blogger template), ported to Mecha.
 image: /lot/y/blogger-moto/index.png
 images:
@@ -11,7 +11,7 @@ images:
 - /lot/y/blogger-moto/index/5.png
 author: Taufik Nurrohman
 type: Markdown
-version: 1.0.7
+version: 1.0.8
 ...
 
 This is not a clone of the original Moto template. I didn’t make it from the original source code, but by refactoring
