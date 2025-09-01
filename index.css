@@ -827,7 +827,7 @@ body > div > nav + div > main > article + nav {
     width: auto;
   }
 }
-.skin\:do {
+.skin-do {
   --color-1: #fee;
   --color-button: #fff;
   --color-code: #fff;
@@ -857,7 +857,7 @@ body > div > nav + div > main > article + nav {
   --stroke: #a43;
 }
 
-.skin\:mr {
+.skin-mr {
   --color-1: #ffe;
   --color-button: #fff;
   --color-code: #fff;
@@ -887,7 +887,7 @@ body > div > nav + div > main > article + nav {
   --stroke: #998;
 }
 
-.skin\:ms {
+.skin-ms {
   --color-1: #fef;
   --color-button: #fff;
   --color-code: #fff;
@@ -917,7 +917,7 @@ body > div > nav + div > main > article + nav {
   --stroke: #d7b;
 }
 
-.skin\:mx {
+.skin-mx {
   --color-1: #eef;
   --color-button: #fff;
   --color-code: #fff;
@@ -947,7 +947,7 @@ body > div > nav + div > main > article + nav {
   --stroke: #46a;
 }
 
-.skin\:so {
+.skin-so {
   --color-1: #ffe;
   --color-button: #fff;
   --color-code: #fff;
@@ -977,7 +977,7 @@ body > div > nav + div > main > article + nav {
   --stroke: #571;
 }
 
-.skin\:wo {
+.skin-wo {
   --color-1: #eee;
   --color-button: #fff;
   --color-code: #fff;
